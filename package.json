@@ -1,0 +1,22 @@
+{
+  "name": "xap-net-address",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Utility to determine network addresses for xAP",
+  "main": "xap-net-address.js",
+  "files": [
+    "xap-net-address.js"
+  ],
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "author": "Edward Pearson",
+  "license": "ISC",
+  "dependencies": {
+    "default-gateway": "^2.7.1",
+    "ipaddr.js": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.11"
+  }
+}
