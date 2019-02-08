@@ -3,8 +3,10 @@ A NodeJS utility module to determine broadcast and network addresses for xAP hom
 
 ## Usage
 Typescript
+
     import { xAPnetAddress } from 'xap-net-address'
     
 JavaScript
+
     var xAPnetAddress = require('xap-net-address)
 
