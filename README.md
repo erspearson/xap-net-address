@@ -3,7 +3,7 @@ A NodeJS utility module that calulates the broadcast and network addresses to us
 
 Written in TypeScript.
 
-Uses the [silverwind/default-gateway](https://github.com/silverwind/default-gateway) excellent cross-platform library to do the heavy lifting.
+Uses the [silverwind/default-gateway](https://github.com/silverwind/default-gateway) excellent, cross-platform library to do the heavy lifting.
 
 ## Usage
 
@@ -17,6 +17,7 @@ var xAPnetAddress = require('xap-net-address')
 ```
 
 ## API
+Three static members:
 * **xAPnetAddress.defaultInterface()**
 determines the default gateway and returns the interface info for the adapter that connects to it.
 
@@ -34,19 +35,19 @@ See [test/test.ts](./test/test.ts) for an example of usage.
 
 ## Background
 Implementers of xAP software have sometimes struggled to determine reliably the correct IPv4 addresses to use in xAP UDP communication.
-It is a simple enough task for embedded hardware with a single network interface but it becomes a non-trivial
-when the host device has multiple physical or virtual network interfaces,
+It is a simple enough task for embedded hardware with a single network interface but it becomes non-trivial
+when the host has multiple physical or virtual network interfaces,
 possibly supporting both IPv4 and IPv6 and with multiple IP addresses.
 Any need to work on more than one platform makes this even harder.
 
 The correct network interface to use for xAP is generally the one with the route to the LAN's default gateway.
 There is no consistent way to determine this across platforms but silverwind's default-gateway library implements a number of
 platform-specific methods behind a single API to do this. xap-net-address uses default-gateway to suggest the most likely default addresses
-for sending and receiving xAP UDP messgaes.
+for sending and receiving xAP UDP messages.
 
 This library is an add-on for the xap-framework library for NodeJS.
 It is split out from the main library since, necessairily, default-gateway
 needs quite a few dependencies to do its work cross-platform.
 A consumer of xap-framework may not require
-the xAP network addresses to be determined dynamically and so can avoid these dependencies
+the xAP network addresses to be determined dynamically and may prefer to avoid these dependencies
 in their work by providing the addresses via other means (e.g., .ini files).
