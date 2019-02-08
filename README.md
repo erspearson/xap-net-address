@@ -1,9 +1,15 @@
 # xap-net-address
 A NodeJS utility module that calulates the broadcast and network addresses to use for the xAP home automation UDP transport.
 
-Written in TypeScript.
+Written in TypeScript (v3.1.1). Tested on NodeJS (v8.12.0). May work with earlier versions.
 
 Uses the [silverwind/default-gateway](https://github.com/silverwind/default-gateway) excellent, cross-platform library to do the heavy lifting.
+
+## Installation
+
+```shell
+> npm install xap-net-address
+```
 
 ## Usage
 
@@ -17,7 +23,7 @@ var xAPnetAddress = require('xap-net-address')
 ```
 
 ## API
-Three static members:
+Three static methods:
 * **xAPnetAddress.defaultInterface()**
 determines the default gateway and returns the interface info for the adapter that connects to it.
 
@@ -29,7 +35,7 @@ examines the defaultInterface and returns the broadcast address for transmitting
 
 All methods may return `undefined` or will throw an exception if the default gateway cannot be determined (e.g., when there is no network).
 
-Representations for IP addresses and network interfaces are from [whitequark/ipaddr.js](https://github.com/whitequark/ipaddr.js).
+Representations for IP addresses and network interfaces are from [whitequark/ipaddr.js](https://github.com/whitequark/ipaddr.js) and Node's `os.networkInterfaces()`.
 
 See [test/test.ts](./test/test.ts) for an example of usage.
 
@@ -51,3 +57,20 @@ needs quite a few dependencies to do its work cross-platform.
 A consumer of xap-framework may not require
 the xAP network addresses to be determined dynamically and may prefer to avoid these dependencies
 in their work by providing the addresses via other means (e.g., .ini files).
+
+## TypeScript
+The TypeScript source is in the `src` directory on the GitHub respository.
+
+The compiled JavaScript and TypeScript definitions are in the `lib` directory on NPM.
+
+To build from source:
+* Clone the Git repository
+* `npm install` to download dependencies
+* `tsc` to compile the source.
+
+To run the test example:
+* `cd test`
+* `tsc` to compile
+* `node test.js` to run.
+
+
