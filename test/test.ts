@@ -13,7 +13,7 @@ try {
 }
 
 if(myint) {
-  console.log('  Appropriate network interface is: ' + myint.mac)
+  console.log('  Selected network interface is: ' + myint.mac)
 
   let myip = xAPnetAddress.defaultIP()
   if(myip) {
