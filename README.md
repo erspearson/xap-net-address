@@ -3,14 +3,13 @@ A NodeJS utility module that calulates the broadcast and network addresses to us
 
 Written in TypeScript.
 
-Uses [silverwind/default-gateway](https://github.com/silverwind/default-gateway) excellent cross-platform library to do the heavy lifting.
+Uses the [silverwind/default-gateway](https://github.com/silverwind/default-gateway) excellent cross-platform library to do the heavy lifting.
 
 ## Usage
 
 ```typescript
 // TypeScript
 import { xAPnetAddress } from 'xap-net-address'
-const receiveAddress = xAPnetAddress.defaultIP()
 ```
 ```javascript
 // JavaScript
@@ -31,6 +30,8 @@ All methods may return `undefined` or will throw an exception if the default gat
 
 Representations for IP addresses and network interfaces are from [whitequark/ipaddr.js](https://github.com/whitequark/ipaddr.js).
 
+See [test/test.ts](./test/test.ts) for an example of usage.
+
 ## Background
 Implementers of xAP software have sometimes struggled to determine reliably the correct IPv4 addresses to use in xAP UDP communication.
 It is a simple enough task for embedded hardware with a single network interface but it becomes a non-trivial
@@ -48,4 +49,4 @@ It is split out from the main library since, necessairily, default-gateway
 needs quite a few dependencies to do its work cross-platform.
 A consumer of xap-framework may not require
 the xAP network addresses to be determined dynamically and so can avoid these dependencies
-in their work by providing the addresses by other means (e.g., .ini files).
+in their work by providing the addresses via other means (e.g., .ini files).
