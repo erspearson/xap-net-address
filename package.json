@@ -1,22 +1,31 @@
 {
   "name": "xap-net-address",
+  "description": "Utility to determine local network addresses for xAP home automation UDP transport",
   "version": "1.0.0",
-  "private": true,
-  "description": "Utility to determine network addresses for xAP",
-  "main": "xap-net-address.js",
-  "files": [
-    "xap-net-address.js"
-  ],
-  "scripts": {
-    "test": "node tests/test.js"
-  },
   "author": "Edward Pearson",
-  "license": "ISC",
+  "license": "MIT",
+  "private": false,
+  "main": "lib/xap-net-address.js",
+  "files": [
+    "package.json",
+    "lib/xap-net-address.js",
+    "lib/xap-net-address.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erspearson/xap-net-address.git"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
   "dependencies": {
-    "default-gateway": "^2.7.1",
-    "ipaddr.js": "^1.7.0"
+    "default-gateway": "^2.7.2",
+    "ipaddr.js": "^1.8.1"
   },
   "devDependencies": {
-    "@types/node": "^8.10.11"
-  }
+    "@types/node": "^8.10.39"
+  },
+  "keywords": [
+    "xAP home automation"
+  ]
 }
