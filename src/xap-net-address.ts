@@ -21,11 +21,13 @@ export module xAPnetAddress {
     }
   }
   
-  export function defaultIP() : ipaddr.IPv4 {
-    let ip = ipaddr.IPv4.parse('0.0.0.0')
+  export function defaultIP() : ipaddr.IPv4 | undefined {
     let addr = defaultInterface()
-    if(addr && addr.address) { ip = ipaddr.IPv4.parse(addr.address) }
-    return ip;
+    if(addr && addr.address) { 
+      return ipaddr.IPv4.parse(addr.address)
+    } else {
+      return undefined;
+    }
   }
 
   let defaultInterfaceInfo: string | undefined = undefined;
