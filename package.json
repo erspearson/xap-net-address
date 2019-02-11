@@ -1,11 +1,12 @@
 {
   "name": "xap-net-address",
   "description": "Utility to determine local network addresses for xAP home automation UDP transport",
-  "version": "1.0.2",
   "author": "Edward Pearson",
+  "version": "1.0.2",
   "license": "MIT",
-  "private": false,
+  "keywords": [ "xAP home automation", "TypeScript", "NodeJS" ],
   "main": "lib/xap-net-address.js",
+  "types": "lib/xap-net-address.d.ts",
   "files": [
     "package.json",
     "lib/xap-net-address.js",
@@ -19,6 +20,8 @@
     "url": "https://github.com/erspearson/xap-net-address.git"
   },
   "scripts": {
+    "build": "tsc -p .",
+    "buildtests": "tsc -p test",
     "test": "node test/test.js"
   },
   "dependencies": {
@@ -28,8 +31,5 @@
   "devDependencies": {
     "typescript": "^3.0.0",
     "@types/node": "^8.10.39"
-  },
-  "keywords": [
-    "xAP home automation"
-  ]
+  }
 }
