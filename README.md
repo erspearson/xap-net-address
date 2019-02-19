@@ -56,7 +56,7 @@ platform-specific methods behind a single API to do this. xap-net-address uses d
 for sending and receiving xAP UDP messages.
 
 This library is an add-on for the xap-framework library for NodeJS.
-It is split out from the main library since, necessairily, default-gateway
+It is split out from the main library since, necessarily, default-gateway
 needs quite a few dependencies to do its work cross-platform.
 A consumer of xap-framework may not require
 the xAP network addresses to be determined dynamically and may prefer to avoid these dependencies
