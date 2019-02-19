@@ -37,7 +37,11 @@ All methods may return `undefined` or will throw an exception if the default gat
 
 Representations for IP addresses and network interfaces are from [whitequark/ipaddr.js](https://github.com/whitequark/ipaddr.js) and Node's `os.networkInterfaces()`.
 
-See [test/test.ts](./test/test.ts) for an example of usage.
+See [test/test.ts](./test/test.ts) for an example of using this module.
+
+[xap-hub](https://github.com/erspearson/xap-hub) uses `xap-net-address`.
+If you are creating a [xap-framework](https://github.com/erspearson/xap-framework) application
+that is to be a client of `xap-hub` then you do not need to use `xap-net-address`.
 
 ## Background
 Implementers of xAP software have sometimes struggled to determine reliably the correct IPv4 addresses to use in xAP UDP communication.
@@ -59,7 +63,7 @@ the xAP network addresses to be determined dynamically and may prefer to avoid t
 in their work by providing the addresses via other means (e.g., .ini files).
 
 ## TypeScript
-The TypeScript source is in the `src` directory on the GitHub respository.
+The TypeScript source is in the `src` directory on the GitHub repository.
 
 The compiled JavaScript and TypeScript definitions are in the `lib` directory on NPM.
 
