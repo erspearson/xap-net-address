@@ -63,7 +63,7 @@ the xAP network addresses to be determined dynamically and may prefer to avoid t
 in their work by providing the addresses via other means (e.g., .ini files).
 
 ## TypeScript
-The TypeScript source is in the `src` directory on the GitHub repository.
+The TypeScript source is in the `src` directory on the [GitHub repository](https://github.com/erspearson/xap-net-address).
 
 The compiled JavaScript and TypeScript definitions are in the `lib` directory on NPM.
 
