@@ -77,4 +77,5 @@ To run the test example:
 * `tsc` to compile
 * `node test.js` to run.
 
-
+xap-net-address is part of a family of modules for xAP  
+![xAP family diagram](/img/xap-family-net-address.png?raw=true)
